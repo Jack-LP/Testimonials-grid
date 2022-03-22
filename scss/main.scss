@@ -1,0 +1,149 @@
+@import "variables";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: $bodyFont;
+  background-color: $lightGrayBlue;
+}
+
+.container {
+  width: min(90%, 45rem);
+  margin: 4rem auto;
+  row-gap: 2rem;
+  display: grid;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  color: $white;
+  border-radius: 1.5rem;
+  &__avatar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    &__name {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+      .grey {
+        color: $lightGray;
+      }
+    }
+    img {
+      border-radius: 50%;
+      height: auto;
+      width: 4rem;
+      border: 0.2rem solid $lightGray;
+    }
+  }
+  &__title-text {
+    font-weight: $heavyWeight;
+    font-size: 1.9rem;
+    line-height: 1.6;
+  }
+  &__sub-text {
+    font-size: 1.4rem;
+    color: $lightGray;
+    font-weight: $lightWeight;
+    line-height: 1.6;
+  }
+}
+
+.card1 {
+  background-color: $moderateViolet;
+}
+
+.card2 {
+  background-color: $veryDarkGreyBlue;
+}
+
+.card3 {
+  background-color: $white;
+  color: $veryDarkBlackBlue;
+  .card__sub-text {
+    color: $veryDarkGreyBlue;
+  }
+  .grey {
+    color: $veryDarkGreyBlue;
+  }
+}
+
+.card4 {
+  background-color: $veryDarkBlackBlue;
+  .card__avatar {
+    img {
+      border: 0.2rem solid $moderateViolet;
+    }
+  }
+}
+
+.card5 {
+  background-color: $white;
+  color: $veryDarkBlackBlue;
+  .card__sub-text {
+    color: $veryDarkGreyBlue;
+  }
+  .grey {
+    color: $veryDarkGreyBlue;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .card1 {
+    grid-area: card1;
+  }
+  .card2 {
+    grid-area: card2;
+  }
+  .card3 {
+    grid-area: card3;
+  }
+  .card4 {
+    grid-area: card4;
+  }
+  .card5 {
+    grid-area: card5;
+  }
+
+  .container {
+    width: min(90%, 120rem);
+    margin: 15rem auto;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
+  }
+
+  .card {
+    &__title-text {
+      font-size: 2.2rem;
+    }
+    &__sub-text {
+      font-size: 1.4rem;
+    }
+  }
+}

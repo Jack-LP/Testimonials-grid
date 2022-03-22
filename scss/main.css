@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: #ecf2f8;
+}
+
+.container {
+  width: min(90%, 45rem);
+  margin: 4rem auto;
+  row-gap: 2rem;
+  display: grid;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  color: #fff;
+  border-radius: 1.5rem;
+}
+.card__avatar {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.card__avatar__name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+}
+.card__avatar__name .grey {
+  color: #cfcfcf;
+}
+.card__avatar img {
+  border-radius: 50%;
+  height: auto;
+  width: 4rem;
+  border: 0.2rem solid #cfcfcf;
+}
+.card__title-text {
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 1.6;
+}
+.card__sub-text {
+  font-size: 1.4rem;
+  color: #cfcfcf;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.card1 {
+  background-color: #7541c8;
+}
+
+.card2 {
+  background-color: #48556a;
+}
+
+.card3 {
+  background-color: #fff;
+  color: #19212e;
+}
+.card3 .card__sub-text {
+  color: #48556a;
+}
+.card3 .grey {
+  color: #48556a;
+}
+
+.card4 {
+  background-color: #19212e;
+}
+.card4 .card__avatar img {
+  border: 0.2rem solid #7541c8;
+}
+
+.card5 {
+  background-color: #fff;
+  color: #19212e;
+}
+.card5 .card__sub-text {
+  color: #48556a;
+}
+.card5 .grey {
+  color: #48556a;
+}
+
+@media screen and (min-width: 1100px) {
+  .card1 {
+    grid-area: card1;
+  }
+
+  .card2 {
+    grid-area: card2;
+  }
+
+  .card3 {
+    grid-area: card3;
+  }
+
+  .card4 {
+    grid-area: card4;
+  }
+
+  .card5 {
+    grid-area: card5;
+  }
+
+  .container {
+    width: min(90%, 120rem);
+    margin: 15rem auto;
+    row-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "card1 card1 card2 card5" "card3 card4 card4 card5";
+  }
+
+  .card__title-text {
+    font-size: 2.2rem;
+  }
+  .card__sub-text {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=main.css.map */
